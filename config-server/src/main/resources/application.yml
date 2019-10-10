@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Gritg/springcloud_learn.git
+          search-paths: respo
+          username: Gritg
+          password: Gritgdasv_GitHub
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
